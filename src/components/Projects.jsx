@@ -4,32 +4,51 @@ import project2Image from "../assets/Rani3.png";
 import project3Image from "../assets/Rani3.png";
 
 function Projects() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
   const projects = [
     {
       title: "Smart Mobile Store Web App",
       description: "E-commerce and admin system for mobile shopping with both online and offline customer management.",
-      details: "Implemented Add to Cart with quantity control, search and filter by price/brand/category, smart chatbot recommendations, product comparison, walk-in customer token system, admin sales dashboard, daily sales reports, and Firebase Firestore integration.",
       image: project1Image,
       github: "https://github.com/ranibhosale/smart-mobile-store",
-      tags: ["React.js", "Firebase", "Tailwind CSS"]
+      liveDemo: "#",
+      tags: ["React.js", "Firebase", "Tailwind CSS"],
+      features: [
+        "Add to Cart with quantity control",
+        "Search and filter by price/brand/category",
+        "Smart chatbot recommendations",
+        "Walk-in customer token system",
+        "Admin sales dashboard & daily reports"
+      ]
     },
     {
       title: "NutriScan – Personalized Health Analyzer",
       description: "Mobile app that analyzes ingredients and offers personalized health guidance using barcode scanning.",
-      details: "Built barcode scanning, multilingual ingredient parser, health risk evaluation for allergies, diabetes, hypertension, traffic-light rating, diet recommendations, and local caching with Room to reduce API calls.",
       image: project2Image,
       github: "https://github.com/ranibhosale/nutriscan-health-analyzer",
-      tags: ["Flutter", "Java", "Room"]
+      liveDemo: "#",
+      tags: ["Flutter", "Java", "Room"],
+      features: [
+        "Barcode scanning & ingredient analysis",
+        "Personalized health recommendations",
+        "Multi-language support",
+        "History tracking",
+        "Clean & intuitive mobile UI"
+      ]
     },
     {
       title: "Medicine Supply Management System",
       description: "Responsive web system for medicine availability management with AI chatbot support.",
-      details: "Developed backend logic, database management, responsive frontend, AI chatbot integration for search and assistance, and real-time data updates with performance optimization.",
       image: project3Image,
       github: "https://github.com/ranibhosale/medicine-supply-management",
-      tags: ["Node.js", "MongoDB", "AI"]
+      liveDemo: "#",
+      tags: ["Node.js", "MongoDB", "AI"],
+      features: [
+        "Medicine inventory management",
+        "Order & supplier management",
+        "AI chatbot for medicine search",
+        "Reports & analytics",
+        "Secure admin dashboard"
+      ]
     }
   ];
 
@@ -40,71 +59,52 @@ function Projects() {
       </div>
 
       <div className="project-grid">
-        {projects.map((project, index) => {
-          const isActive = activeIndex === index;
+        {projects.map((project) => (
+          <div className="project-card" key={project.title}>
+            <div className="project-image-wrap">
+              <img src={project.image} alt={project.title} />
+            </div>
 
-          return (
-            <div
-              className={`project-card ${isActive ? "expanded" : ""}`}
-              key={project.title}
-              onClick={() => setActiveIndex(isActive ? null : index)}
-            >
-              <div className="project-header">
-                <h3>{project.title}</h3>
-                <span className="project-toggle">
-                  {isActive ? "Hide Details" : "View Details"}
-                </span>
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+
+              <div className="project-features">
+                {project.features.map((feature, idx) => (
+                  <div className="feature-item" key={idx}>
+                    <span className="checkmark">✓</span>
+                    <span>{feature}</span>
+                  </div>
+                ))}
               </div>
 
-              <p>{project.description}</p>
               <div className="project-tags">
                 {project.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
+                  <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
 
               <div className="project-actions">
-                <button
-                  className="project-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setActiveIndex(isActive ? null : index);
-                  }}
-                >
-                  GitHub
-                </button>
                 <a
-                  className="project-link"
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  onClick={(e) => e.stopPropagation()}
+                  className="project-btn github-btn"
                 >
-                  Open Repo
+                  GitHub
+                </a>
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-btn live-demo-btn"
+                >
+                  Live Demo
                 </a>
               </div>
-
-              {isActive && (
-                <div className="project-detail">
-                  <div className="project-detail-text">
-                    <p>{project.details}</p>
-                    <a
-                      className="project-detail-link"
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View GitHub repository
-                    </a>
-                  </div>
-                  <div className="project-detail-image">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                </div>
-              )}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );
