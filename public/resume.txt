@@ -1,0 +1,22 @@
+Rani
+Java Full Stack Developer
+
+Professional Summary
+Experienced Java Full Stack Developer with strong skills in building scalable web applications using Java, Spring Boot, React, REST APIs, and modern database technologies.
+
+Technical Skills
+- Java, Spring Boot, REST APIs, Microservices
+- React, JavaScript, HTML, CSS
+- MySQL, MongoDB, Docker, Git, AWS
+
+Experience
+- Full Stack Developer: Building scalable web applications and modern user interfaces
+- Backend Developer: Designing APIs, database integration, and server-side architecture
+- Junior Software Developer: Developing web solutions and improving application quality
+
+Education & Certifications
+- Software Engineering and Development Foundation
+- Continuous professional learning in full-stack development and cloud technologies
+
+Contact
+Email: hello@example.com
