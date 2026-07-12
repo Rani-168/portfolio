@@ -26,7 +26,7 @@ function Hero() {
             <a className="secondary-btn" href="#contact">Contact Me</a>
           </div>
           <div className="hero-social">
-            <a href="https://github.com/" target="_blank">GitHub</a>
+            <a href="https://github.com/Rani-168" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/rani-bhosale-833945290/" target="_blank">LinkedIn</a>
             <a href="mailto:ranibhosale168@gmail.com" target="_blank">
  Mail
