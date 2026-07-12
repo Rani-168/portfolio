@@ -1,13 +1,14 @@
 ﻿function Skills() {
   const skills = [
+    "Java",
     "HTML",
     "CSS",
     "JavaScript",
     "React.js",
     "Node.js",
     "MongoDB",
-    "Git & GitHub",
-    "Java"
+    "MySQL",
+    "Git & GitHub"
   ];
 
   return (

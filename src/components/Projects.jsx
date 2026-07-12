@@ -1,7 +1,7 @@
 ﻿import { useState } from "react";
-import project1Image from "../assets/Rani3.png";
-import project2Image from "../assets/Rani3.png";
-import project3Image from "../assets/Rani3.png";
+import project1Image from "../assets/image1.png";
+import project2Image from "../assets/image.png";
+import project3Image from "../assets/image2.png";
 
 function Projects() {
   const projects = [
