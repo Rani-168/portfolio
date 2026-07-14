@@ -94,7 +94,7 @@ function Projects() {
                   GitHub
                 </a>
                 <a
-                  href={project.liveDemo}
+                  href="https://med-sup.netlify.app/"
                   target="_blank"
                   rel="noreferrer"
                   className="project-btn live-demo-btn"
